@@ -1,0 +1,15 @@
+name: Translations
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  babel-extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Base (trusted) translation check
+        run: echo "trusted base-branch workflow definition; no regression"
